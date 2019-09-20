@@ -1,0 +1,43 @@
+<div class="user" *ngIf="isUser">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h2>Profil</h2>
+            <form [formGroup]="userForm" (ngSubmit)="updateUser()">
+
+                <div class="form-group">
+                    <label>Nom d'utilisateur</label>
+                    <input type="text" id="userName" class="form-control" 
+                        formControlName="username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" class="form-control" formControlName="email" >
+                </div>
+                <div class="form-group">
+                    <label>Telephone</label>
+                    <input type="text" id="tel" formControlName="tel" class="form-control" >
+                </div>
+                <button class="btn btn-primary" type="submit" [disabled]="!userForm.valid">Enregistrer</button>
+            </form>
+            <h2>Changer le mot de passe</h2>
+            <form [formGroup]="passwordForm" (ngSubmit)="updatePassword()">
+
+                <div class="form-group">
+                    <label for="Apassword">Mot de passe actuel</label>
+                    <input type="password" id="Apassword" class="form-control" formControlName="actualPassword">
+                </div>
+                <div class="form-group">
+                    <label for="password">Nouveau mot de passe</label>
+                    <input type="password" id="password" class="form-control" formControlName="newPassword">
+                </div>
+                <div class="form-group">
+                    <label for="password">Verfier mot de passe</label>
+                    <input type="password" id="Vpassword" class="form-control" formControlName="VnewPassword">
+                </div>
+
+                <button class="btn btn-primary" type="submit" [disabled]="!passwordForm.valid">Enregistrer</button>
+            </form>
+            <p class="text-danger">{{ errorMessage }}</p>
+        </div>
+    </div>
+</div>

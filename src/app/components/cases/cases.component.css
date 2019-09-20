@@ -1,0 +1,24 @@
+.news {
+  display: flex;
+  flex-direction: column;
+}
+
+.cases {
+  display: flex;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+.kid {
+  height: 200px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}

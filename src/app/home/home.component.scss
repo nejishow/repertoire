@@ -1,0 +1,188 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.rechercher {
+  display: flex;
+}
+.standard{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  background-color: white;
+}
+.dont {
+  max-height: 700px;
+  height: 450px;
+  align-items: center;
+  align-content: center;
+}
+
+.img {
+  height: 100%;
+  width: auto;
+  display: block;
+  align-self: middle;
+  margin-left: auto;
+  padding-top: 10%;
+}
+
+.info {
+  background: linear-gradient(to left, grey, #9DBFAF);
+  display: flex;
+  height: 50vh;
+  text-align: center;
+}
+
+.c1 {
+  width: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.c2 {
+  width: 30%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.searchTerm {
+  width: 50%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 50px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  margin-left: auto;
+}
+
+.searchTerm:focus {
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: auto;
+  height: auto;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: auto;
+  margin-right: auto;
+}
+
+.custom {
+  display: flex;
+  height: 400px;
+  width: auto;
+  background-color: transparent;
+}
+.slideshow{
+margin-left: auto;
+margin-right: auto;
+height: 400px;
+width: 100%;
+display: block;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: linear-gradient(to bottom, grey, #9DBFAF);
+  height: 200px;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: xx-small;
+}
+.foot1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: xx-small;
+}
+
+.img-footer {
+  height: 100px;
+  width: 100px;
+}
+
+$ease: cubic-bezier(.2, 1, .3, 1);
+
+.custom {
+  margin-bottom: 5%;
+
+  svg {
+
+    margin: 0 2rem;
+    cursor: pointer;
+    overflow: visible;
+
+    polygon,
+    path {
+      transition: all 0.5s $ease;
+    }
+
+    &:hover polygon,
+    &:hover path {
+      transition: all 1s $ease;
+      fill: #FF4136;
+    }
+
+    &:hover .arrow {
+      animation: arrow-anim 2.5s $ease infinite;
+    }
+
+    &:hover .arrow-fixed {
+      animation: arrow-fixed-anim 2.5s $ease infinite;
+    }
+  }
+}
+
+@keyframes arrow-anim {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  5% {
+    transform: translateX(-0.1rem);
+  }
+
+  100% {
+    transform: translateX(1rem);
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-fixed-anim {
+  5% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

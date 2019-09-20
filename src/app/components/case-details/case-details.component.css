@@ -1,0 +1,19 @@
+
+table{
+    width: 50%;
+    margin: auto;
+}
+.custom {
+    display: flex;
+    height: 400px;
+    width: auto;
+    background-color: transparent;
+  }
+  .slideshow{
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 100%;
+  display: block;
+  }
+  

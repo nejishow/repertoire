@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Creer un nouveau cas de disparition</h2>
+    <form [formGroup]="createcaseForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Nom complet</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input type="text" id="age" class="form-control" formControlName="age">
+      </div>
+      <div class="form-group">
+        <label>Sexe</label> <br>
+
+        <select name="sexe" id="sexe" formControlName="sexe">
+          <option value="masculin">Masculin</option>
+          <option value="feminin">Feminin</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Taille en centimetre</label>
+        <input type="text" placeholder="en cm" id="taille" class="form-control" formControlName="taille">
+      </div>
+      <div class="form-group">
+        <label>Nom du pere</label>
+        <input type="text" id="father" class="form-control" formControlName="father">
+      </div>
+      <div class="form-group">
+        <label>Nom de la mere</label>
+        <input type="text" id="mother" class="form-control" formControlName="mother">
+      </div>
+      <div class="form-group">
+        <label>Numero à contacter</label>
+        <input type="text" id="number" class="form-control" formControlName="number">
+      </div>
+      <div class="form-group">
+        <label>address</label>
+        <input type="text" id="address" class="form-control" formControlName="address">
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" placeholder="Derniers evenements, habits portés etc..." id="description" class="form-control"
+          formControlName="description">
+      </div>
+      <div class="form-group" id="pic">
+        <label for="file" class="disappear">Ajouter une photo</label>
+        <input type="file" class="disappear" (change)="upload($event)" accept=".png,.jpg" />
+      </div>
+      <div class="image">
+        <div *ngFor="let item of picTab" style="width: auto">
+            <mat-card class="card">
+          <img [src]="item.image">
+            </mat-card>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit" [disabled]="createcaseForm.invalid">Lancer l'avis de
+        recherche</button>
+    </form>
+    <p class="text-danger">{{ errorMessage }}</p>
+  </div>
+</div>

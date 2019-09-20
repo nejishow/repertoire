@@ -1,0 +1,41 @@
+
+@import '../../styles-variables.scss';
+
+abe-header {
+  mat-toolbar {
+    width: 100%;
+  }
+  
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    mat-toolbar {
+      width: 80%;
+    }
+  }
+}
+mat-toolbar {
+  align-items: center;
+  height: auto;
+  position: static;
+  background-color: white;
+
+}
+
+.filler {
+  flex: 1 1 auto;
+}
+
+a {
+  font-size: large;
+}
+
+.img {
+height: 50%;
+width: auto;
+}
+
+.row2 {
+  height: 10%;
+  background-color: grey;
+}
+a, span{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
