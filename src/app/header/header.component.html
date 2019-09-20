@@ -1,11 +1,11 @@
 <mat-toolbar #toolbar role="heading">
   <mat-toolbar-row class="row1">
-    <span>Repertoire</span>
+      <span>Repertoire</span>
     <span class="filler"></span>
     <img src="../../assets/facebook-logo.png" class="img" alt="">
     <img src="../../assets/twitter-letter-logo.png" class="img" alt="">
     <img src="../../assets/gmail-logo.png" class="img" alt="">
-    <h5>+25377000000</h5>
+    <span>+25377000000</span>
   </mat-toolbar-row>
   <mat-toolbar-row class="row2">
     <span class="filler"></span>
@@ -13,6 +13,6 @@
     <a mat-button [routerLink]="['/cases']">Liste</a>
     <a mat-button *ngIf="isUser" [routerLink]="['/createCase']">Creer une alerte</a>
     <a mat-button *ngIf="isUser" [routerLink]="['/profil']">Profil</a>
-    <a mat-button *ngIf="isUser" (tap)="signOut()">Deconnexion</a>
+    <a mat-button *ngIf="isUser" (tap)="signOut()" >Deconnexion</a>
   </mat-toolbar-row>
 </mat-toolbar>
