@@ -1,0 +1,51 @@
+    <div class="custom">
+      <div class="slideshow">
+        <slideshow #slideshow [imageUrls]="picTab" [height]="height" [minHeight]="minHeight" [arrowSize]="arrowSize"
+          [showArrows]="showArrows" [disableSwiping]="disableSwiping" [autoPlay]="autoPlay"
+          [stopAutoPlayOnSlide]="stopAutoPlayOnSlide" [debug]="debug" [backgroundSize]="backgroundSize"
+          [backgroundPosition]="backgroundPosition" [backgroundRepeat]="backgroundRepeat" [showDots]="showDots"
+          [dotColor]="dotColor" [showCaptions]="showCaptions" [captionColor]="captionColor"
+          [captionBackground]="captionBackground" [lazyLoad]="lazyLoad" [hideOnNoSlides]="hideOnNoSlides"
+          (onSlideRight)="onSlideRight()">
+        </slideshow>
+        <button mat-button>
+          <fb-like url={{url}}></fb-like>
+        </button>
+      </div>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Enfant de</th>
+              <td>{{case?.father}} et de {{case?.mother}}
+              </td>
+            </tr>
+            <tr>
+              <th>Agé de </th>
+              <td>{{case?.age}} ans
+              </td>
+            </tr>
+            <tr>
+              <th>Taille</th>
+              <td>{{case?.taille}} cm
+              </td>
+            </tr>
+            <tr>
+              <th>Genree</th>
+              <td>{{case?.sexe}}
+              </td>
+            </tr>
+            <tr>
+              <th>Contacter</th>
+              <td>{{case?.number}}
+              </td>
+            </tr>
+            <tr>
+              <th>Signalé le</th>
+              <td>{{case?.release_date | date:'medium'}}</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>{{case?.description}}</td>
+            </tr>
+          </tbody>
+        </table>
