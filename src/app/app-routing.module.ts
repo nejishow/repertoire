@@ -1,3 +1,4 @@
+import { FooterComponent } from './footer/footer.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -27,7 +28,7 @@ const routes: Routes = [
 
 ];
 export const components = [
-  HomeComponent, LoginComponent, HeaderComponent,
+  HomeComponent, LoginComponent, HeaderComponent, FooterComponent,
    CreatecaseComponent, SignUpComponent, CaseDetailsComponent,
     CasesComponent, DialogOverviewExampleDialog,
     ProfilComponent, Dialog, CaseSearchComponent

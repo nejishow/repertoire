@@ -2,4 +2,5 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body{
     background-color: aliceblue;
+    text-justify: auto;
 }

@@ -1,31 +1,52 @@
-<div class="standard">
-  <div class="dashboard">
-    <div class="dont">
-      <img src="../../assets/DontCry.jpg" class="img">
+<div class="container">
+  <div class="row">
+    <div class="jumbotron text-center">
+      <!-- <img src="../../assets/DontCry.jpg" class="img"> -->
+      <h1>BIENVENUE DANS LE REPERTOIRE DES ENFANTS DISPARUS DE DJIBOUTI</h1>
 
     </div>
-    <div class="info">
-      <div class="c1">
-        A propos de nous <br>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a
-        type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of
-        Lorem Ipsum.
-      </div>
-      <div class="c2">
-        <h1>94</h1><br> enfants disparus
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-8 col-lg-10">
+      <div class="card bg-info">
+        <div class="card-body">
+          A propos de nous <br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make
+          a
+          type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing
+          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+          versions
+          of
+          Lorem Ipsum.
+
+        </div>
       </div>
     </div>
-    <div class="search">
-      <input type="text" class="searchTerm" placeholder="Rechercher un enfant" [(ngModel)]="keyword">
-      <button type="submit" class="searchButton" (tap)="rechercher()"> Rechercher
+    <div class="col-12 col-md-4 col-lg-2">
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <h1>94</h1><br> enfants disparus
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <div class="row text-center">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Rechercher un enfant" [(ngModel)]="keyword">
+      <button type="submit" class="btn btn-primary" (tap)="rechercher()"> Rechercher
       </button>
     </div>
-    <div class="custom">
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
       <div class="slideshow">
         <slideshow #slideshow [imageUrls]="imageUrls" [height]="height" [minHeight]="minHeight" [arrowSize]="arrowSize"
           [showArrows]="showArrows" [disableSwiping]="disableSwiping" [autoPlay]="autoPlay"
@@ -37,20 +58,6 @@
         </slideshow>
       </div>
     </div>
-    <footer>
-
-      <div class="foot1">
-        <a href="#"><img class="img-footer" src="/assets/fb.png"></a>
-        <a href="#"><img class="img-footer" src="/assets/gmail.png"></a>
-      </div>
-      <div class="foot">
-        Developpé par Ashraf@2019 <br>
-        <a [routerLink]="['/login']" routerLinkActive="router-link-active">Connection Administrateur ici</a>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from
-          <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
-            href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
-            BY</a></div>
-      </div>
-
-    </footer>
   </div>
+
+</div>

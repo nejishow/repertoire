@@ -1,18 +1,22 @@
-<mat-toolbar #toolbar role="heading">
-  <mat-toolbar-row class="row1">
-    <span>Repertoire</span>
-    <span class="filler"></span>
-    <img src="../../assets/facebook-logo.png" class="img" alt="">
-    <img src="../../assets/twitter-letter-logo.png" class="img" alt="">
-    <img src="../../assets/gmail-logo.png" class="img" alt="">
-    <h5>+25377000000</h5>
-  </mat-toolbar-row>
-  <mat-toolbar-row class="row2">
-    <span class="filler"></span>
-    <a mat-button [routerLink]="['/dashboard']">Acceuil</a>
-    <a mat-button [routerLink]="['/cases']">Liste</a>
-    <a mat-button *ngIf="isUser" [routerLink]="['/createCase']">Creer une alerte</a>
-    <a mat-button *ngIf="isUser" [routerLink]="['/profil']">Profil</a>
-    <a mat-button *ngIf="isUser" (tap)="signOut()">Deconnexion</a>
-  </mat-toolbar-row>
-</mat-toolbar>
+  <div class="container">
+    <div class="row">
+      <nav class=" col navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" [routerLink]="['/dashboard']">
+          <img src="../../assets/logo.png" width="40" height="30" alt="Site logo">
+          REDD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav list-inline">
+              <li class="nav-item active list-inline-item" > <a class="nav-link" [routerLink]="['/dashboard']">Acceuil</a></li>
+              <li class="nav-item list-inline-item"> <a class="nav-link" [routerLink]="['/cases']">Liste</a></li>
+              <li class="nav-item list-inline-item"> <a class="nav-link" *ngIf="isUser" [routerLink]="['/createCase']">Creer une
+                  alerte</a></li>
+              <li class="nav-item list-inline-item"> <a class="nav-link" *ngIf="isUser" [routerLink]="['/profil']">Profil</a></li>
+              <li class="nav-item list-inline-item"> <a class="nav-link" *ngIf="isUser" (tap)="signOut()">Deconnexion</a></li>
+            </ul>
+      </div>
+      </nav>
+    </div>
+  </div>
